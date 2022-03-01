@@ -22,10 +22,6 @@ public class Main {
         Vehicle truck7 = new Truck("Nissan Navara",2930,TypeofEngine.ELECTROMOBILE);//out
 
 
-        Vehicle[] electromobile = {};//car1,car3,car7,truck3,truck5,truck7
-        Vehicle[] hybrid = {};//car6,car8,truck1,truck4,truck6
-        Vehicle[] fuel = {};//car1,car2,car4,car5,truck2
-
         Vehicle[] vehicles = {car1,car3,car7,truck3,truck5,truck7,car6,car8,truck1,truck4,truck6,car1,car2,car4,car5,truck2};
 
         for(Vehicle vehicle : vehicles){
@@ -36,5 +32,25 @@ public class Main {
                 System.err.println(vehicle.getModel() +  " " + e.getMessage());
             }
         }
+        System.out.println("-----------------------------------------------");
+
+        for(Vehicle electromobile : vehicles){
+            if(electromobile.getTypeOfEngine() == TypeofEngine.ELECTROMOBILE){
+                System.out.println(electromobile.getModel() +" " + electromobile.getTypeOfEngine());
+            }
+        }
+        System.out.println("-----------------------------------------------");
+        for(Vehicle hybrid : vehicles){
+            if(hybrid.getTypeOfEngine() == TypeofEngine.HYBRID){
+                System.out.println(hybrid.getModel() +" " + hybrid.getTypeOfEngine());
+            }
+        }
+        System.out.println("----------------------------");
+        for(Vehicle  fuel : vehicles){
+            if(fuel.getTypeOfEngine() == TypeofEngine.FUEL){
+                System.out.println(fuel.getModel() +" " + fuel.getTypeOfEngine());
+            }
+        }
+
     }
 }
