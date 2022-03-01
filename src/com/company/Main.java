@@ -35,19 +35,19 @@ public class Main {
         System.out.println("-----------------------------------------------");
 
         for(Vehicle electromobile : vehicles){
-            if(electromobile.getTypeOfEngine() == TypeofEngine.ELECTROMOBILE){
+            if(electromobile.getTypeOfEngine().equals(TypeofEngine.ELECTROMOBILE)){
                 System.out.println(electromobile.getModel() +" " + electromobile.getTypeOfEngine());
             }
         }
         System.out.println("-----------------------------------------------");
         for(Vehicle hybrid : vehicles){
-            if(hybrid.getTypeOfEngine() == TypeofEngine.HYBRID){
+            if(hybrid.getTypeOfEngine().equals(TypeofEngine.HYBRID)){
                 System.out.println(hybrid.getModel() +" " + hybrid.getTypeOfEngine());
             }
         }
         System.out.println("----------------------------");
         for(Vehicle  fuel : vehicles){
-            if(fuel.getTypeOfEngine() == TypeofEngine.FUEL){
+            if(fuel.getTypeOfEngine().equals(TypeofEngine.FUEL)){
                 System.out.println(fuel.getModel() +" " + fuel.getTypeOfEngine());
             }
         }
